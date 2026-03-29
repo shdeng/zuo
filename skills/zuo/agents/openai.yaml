@@ -1,0 +1,4 @@
+interface:
+  display_name: "zuo"
+  short_description: "以左传式极简文言统一思路、说明与答复，尽量节省交互token"
+  default_prompt: "用 $zuo 以极简文言处理此事。"

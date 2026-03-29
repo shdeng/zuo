@@ -1,0 +1,11 @@
+.env.local
+.codex/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+results/*.json
+results/*.tmp
+transcript_export.json
+_tmp_transcript.py

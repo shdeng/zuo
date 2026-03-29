@@ -1,0 +1,25 @@
+{
+  "name": "sync-users-review-20",
+  "turns": [
+    "先读这段函数，只列 3 个最高风险问题；每点不超过 50 字。\n\n```python\ndef sync_users(db, api, logger):\n    users = api.fetch_all()\n    for user in users:\n        db.upsert(user[\"id\"], user[\"name\"], user[\"email\"])\n        logger.info(\"synced %s\", user[\"id\"])\n    if len(users) > 0:\n        return True\n    db.commit()\n    return False\n```",
+    "仅修最严重问题。给最小改动版函数代码。",
+    "解释你刚才改动的 3 个关键点。每点一句。",
+    "补一份单元测试清单。只要 5 条测试名，pytest 风格。",
+    "从这 5 条里选最关键 2 条。各写 3 步伪代码。",
+    "现在补异常处理。给完整函数代码，但尽量短。",
+    "说明这个异常处理版本还剩哪 3 个风险。短句。",
+    "若要支持 `db.upsert_many()`，给最小改版代码。",
+    "比较 `db.upsert()` 与 `db.upsert_many()`。各列 2 个风险。",
+    "给 `logger` 设计 4 个结构化字段名。只列字段。",
+    "若 `api.fetch_all()` 超时，给 3 点重试策略。",
+    "给这段同步链路设计 5 个 metrics 名。保留英文。",
+    "若要保证幂等，再补 3 个必要条件。",
+    "给回滚策略摘要。只写 3 句。",
+    "站在 reviewer 角度，列 3 个 merge blockers。",
+    "再列 3 个 nice-to-have。",
+    "把前述建议压成 5 步实施顺序。",
+    "为这次修改写一行 commit message。",
+    "为 PR 写 3 句风险说明。要短。",
+    "最后给发布前检查单。6 条，每条一句。"
+  ]
+}
