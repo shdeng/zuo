@@ -57,10 +57,9 @@ python scripts/score_transcript.py baseline.json with-skill.json
 此库已具 skill 正本、校试章程、与初步试录。
 今所用者，为固定之二十轮 code-review / sync-debugging 会话。
 
-### 公开之前
+### 许可证
 
-此库未定许可证。
-若将尽公于世，宜先择其 license；此事涉权责，不可妄代为断。
+此库今用 MIT License。
 
 ## English
 
@@ -121,7 +120,6 @@ python scripts/score_transcript.py baseline.json with-skill.json
 This repository already contains a canonical skill, a benchmark protocol, and initial exploratory results.
 The current benchmark uses a fixed 20-turn code-review / sync-debugging session.
 
-### Before Public Release
+### License
 
-This repository does not yet include a final license.
-Choose one deliberately before making the project fully public.
+This repository uses the MIT License.
