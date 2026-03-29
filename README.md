@@ -2,64 +2,60 @@
 
 ## 中文
 
-`zuo` 者，Codex 之一 skill 也。其志惟一：使 agent 出辞更短、更劲、更近古文，而不伤技义。
+`zuo` 者，skill 也。志在出辞省劲，近乎古文，且不伤技理。布之 GitHub，欲与众共修其辞，同定其法，合校其果，以臻至善。
 
-此库所以公诸 GitHub，使众可共修 skill 之文，共定试法，共校结果，而徐得其优。
+## 所图
 
-### 所图
+非为一时之 prompt，必成可传可验之 skill。
+代码、径路、指令、报错、标识，悉存其真。
+凡涉人言，务极其俭。
+设多轮会话以验之，校诸变体之得失。
 
-- 不作一时 prompt，务成可传可复验之 skill。
-- 代码、路径、指令、报错、标识，悉守原文。
-- 凡自然语言，务求更俭。
-- 以可复验之多轮会话，校诸变体之得失。
+## 篇目
 
-### 目录
+- `skills/zuo/`：本库所奉之正宗。
+- `sessions/`：公用之试题。
+- `scripts/`：安装、计分之器。
+- `docs/benchmark-protocol.md`：校试之章程。
+- `results/README.md`：试录与短评。
+- `variants/README.md`：变体布列与命名之范。
 
-- `skills/zuo/`
-  此库所奉之正本。
-- `sessions/`
-  共用试题。
-- `scripts/`
-  安装与计分之小具。
-- `docs/benchmark-protocol.md`
-  校试之章程。
-- `results/README.md`
-  试录与简评。
-- `variants/README.md`
-  变体之置法与命名之例。
+## 施用
 
-### 速用
+修 `skills/zuo/SKILL.md`。
+纳诸本地 Codex：
 
-1. 修 [skills/zuo/SKILL.md](/D:/Dev/zuo/skills/zuo/SKILL.md)。
-2. 纳之于本地 Codex：
-
-```powershell
+```bash
 python scripts/install_local_skill.py
 ```
 
-3. 依共用二十轮会话而试之。
-4. 导出 `baseline` 与 `with-skill` 之 transcript JSON。
-5. 以此较之：
+取公用二十轮会话试之。
+出 `baseline` 与 `with-skill` 之 JSON 录。
+校比其功：
 
-```powershell
+```bash
 python scripts/score_transcript.py baseline.json with-skill.json
 ```
 
-### 共修之序
+## 参修
 
-1. 修 `skills/zuo/`，或于 `variants/` 下立一新本。
-2. 仍用 [sessions/sync-users-review-20.json](/D:/Dev/zuo/sessions/sync-users-review-20.json)。
-3. 记其结果于 `results/`。
-4. 发 PR，附 skill 之异同、试录之数、与简短一说。
+修 `skills/zuo/`，或立新本于 `variants/`。
+仍试以 `sessions/sync-users-review-20.json`。
+录其果于 `results/`。
+提 PR，必附辞之异同、试录之数与简说。
 
-### 今状
+## 今状
 
-此库已具 skill 正本、校试章程、与初步试录。
-今所用者，为固定之二十轮 code-review / sync-debugging 会话。
+正本、章程、初录皆具。
+今所验者，乃定编二十轮 `code-review` 及 `sync-debugging` 之会话。
 
-### 许可证
+## 授权
 
-此库今用 MIT License。
+MIT。
+
+
+
+如有当增损之处，请随时示下。
 
 ## English
 
@@ -79,17 +75,17 @@ Contributors can refine the skill text, propose variants, run the same benchmark
 ### Layout
 
 - `skills/zuo/`
-  Canonical skill source.
+Canonical skill source.
 - `sessions/`
-  Shared benchmark sessions.
+Shared benchmark sessions.
 - `scripts/`
-  Utilities for local installation and scoring.
+Utilities for local installation and scoring.
 - `docs/benchmark-protocol.md`
-  Benchmark rules.
+Benchmark rules.
 - `results/README.md`
-  Running notes and scoreboard.
+Running notes and scoreboard.
 - `variants/README.md`
-  How to add and name experimental variants.
+How to add and name experimental variants.
 
 ### Quick Start
 
@@ -100,9 +96,9 @@ Contributors can refine the skill text, propose variants, run the same benchmark
 python scripts/install_local_skill.py
 ```
 
-3. Run the shared 20-turn benchmark session.
-4. Export transcript JSON for both `baseline` and `with-skill`.
-5. Compare them:
+1. Run the shared 20-turn benchmark session.
+2. Export transcript JSON for both `baseline` and `with-skill`.
+3. Compare them:
 
 ```powershell
 python scripts/score_transcript.py baseline.json with-skill.json
